@@ -2098,6 +2098,16 @@ int	main()
 	mine = ft_printf("|%48c %54s tg %50.d|\n", 'k', "coucou", 184);
     ft_return_val(mine, real, main);
 
+	printf("##### Tests [***] #####\n");
+    real = printf("|***|\n");
+	mine = ft_printf("|***|\n");
+    ft_return_val(mine, real, main);
+	
+	printf("##### Tests [...] #####\n");
+    real = printf("|...|\n");
+	mine = ft_printf("|...|\n");
+    ft_return_val(mine, real, main);
+	
 	printf("\033[1;31m#######################################\033[0m\n\n\n");
 
 	printf("\n\n\nT'AS %d BONNES REPONSES / %d TESTS", main->count, main->count2);
