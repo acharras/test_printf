@@ -1,5 +1,5 @@
 int		ft_printf(const char *, ...);
-#include "include/libftprintf.h"
+#include "../include/libftprintf.h"
 #include <limits.h>
 
 typedef	struct		s_main
@@ -358,6 +358,26 @@ int	main()
 	printf("##### Tests [.015s] : 42 #####\n");
 	real = printf("|%.015s|\n", "42");
 	mine = ft_printf("|%.015s|\n", "42");
+	ft_return_val(mine, real, main);
+
+	printf("##### Tests [-150.15's] #####\n");
+	real = printf("|%-150.15s|\n", "42");
+	mine = ft_printf("|%-150.15%|\n", "42");
+	ft_return_val(mine, real, main);
+
+	printf("##### Tests [-150.*s] : 15 #####\n");
+	real = printf("|%-150.*s|\n", 15, "42");
+	mine = ft_printf("|%-150.*s|\n", 15, "42");
+	ft_return_val(mine, real, main);
+
+	printf("##### Tests [-*.15s] : 150 #####\n");
+	real = printf("|%-*.15s|\n", 150, "42");
+	mine = ft_printf("|%-*.15s|\n", 150, "42");
+	ft_return_val(mine, real, main);
+
+	printf("##### Tests [-*.*s] : 150 15 #####\n");
+	real = printf("|%-*.*s|\n", 150, 15, "42");
+	mine = ft_printf("|%-*.*s|\n", 150, 15, "42");
 	ft_return_val(mine, real, main);
 
 	printf("\033[1;31m#######################################\033[0m\n\n\n");
@@ -737,6 +757,26 @@ int	main()
 	mine = ft_printf("|%-*.5d|\n", -15, INT_MAX);
 	ft_return_val(mine, real, main);
 
+	printf("##### Tests [-150.15d] : 12345 #####\n");
+	real = printf("|%-150.15d|\n", 12345);
+	mine = ft_printf("|%-150.15d|\n", 12345);
+	ft_return_val(mine, real, main);
+
+	printf("##### Tests [-150.*d] : 15 12345 #####\n");
+	real = printf("|%-150.*d|\n", 15, 12345);
+	mine = ft_printf("|%-150.*d|\n", 15, 12345);
+	ft_return_val(mine, real, main);
+
+	printf("##### Tests [-*.15d] : 150 12345 #####\n");
+	real = printf("|%-*.15d|\n", 150, 12345);
+	mine = ft_printf("|%-*.15d|\n", 150, 12345);
+	ft_return_val(mine, real, main);
+
+	printf("##### Tests [-*.*d] : 150 15 12345 #####\n");
+	real = printf("|%-*.*d|\n", 150, 15, 12345);
+	mine = ft_printf("|%-*.*d|\n", 150, 15, 12345);
+	ft_return_val(mine, real, main);
+
 	printf("\033[1;31m#######################################\033[0m\n\n\n");
 
 	printf("##### Tests [u] 10 #####\n");
@@ -1045,6 +1085,26 @@ int	main()
 	mine = ft_printf("|%-*.5u|\n", -15, INT_MAX);
 	ft_return_val(mine, real, main);
 
+	printf("##### Tests [-150.15u] : 12345 #####\n");
+	real = printf("|%-150.15u|\n", 12345);
+	mine = ft_printf("|%-150.15u|\n", 12345);
+	ft_return_val(mine, real, main);
+
+	printf("##### Tests [-150.*u] : 15 12345 #####\n");
+	real = printf("|%-150.*u|\n", 15, 12345);
+	mine = ft_printf("|%-150.*u|\n", 15, 12345);
+	ft_return_val(mine, real, main);
+
+	printf("##### Tests [-*.15u] : 150 12345 #####\n");
+	real = printf("|%-*.15u|\n", 150, 12345);
+	mine = ft_printf("|%-*.15u|\n", 150, 12345);
+	ft_return_val(mine, real, main);
+
+	printf("##### Tests [-*.*u] : 150 15 12345 #####\n");
+	real = printf("|%-*.*u|\n", 150, 15, 12345);
+	mine = ft_printf("|%-*.*u|\n", 150, 15, 12345);
+	ft_return_val(mine, real, main);
+
 	printf("\033[1;31m#######################################\033[0m\n\n\n");
 
 	printf("##### Tests [x] 10 #####\n");
@@ -1346,6 +1406,26 @@ int	main()
 	printf("##### Tests [-*.5x] : -15 INT_MAX #####\n");
 	real = printf("|%-*.5x|\n", -15, INT_MAX);
 	mine = ft_printf("|%-*.5x|\n", -15, INT_MAX);
+	ft_return_val(mine, real, main);
+
+	printf("##### Tests [-150.15x] : 12345 #####\n");
+	real = printf("|%-150.15x|\n", 12345);
+	mine = ft_printf("|%-150.15x|\n", 12345);
+	ft_return_val(mine, real, main);
+
+	printf("##### Tests [-150.*x] : 15 12345 #####\n");
+	real = printf("|%-150.*x|\n", 15, 12345);
+	mine = ft_printf("|%-150.*x|\n", 15, 12345);
+	ft_return_val(mine, real, main);
+
+	printf("##### Tests [-*.15x] : 150 12345 #####\n");
+	real = printf("|%-*.15x|\n", 150, 12345);
+	mine = ft_printf("|%-*.15x|\n", 150, 12345);
+	ft_return_val(mine, real, main);
+
+	printf("##### Tests [-*.*x] : 150 15 12345 #####\n");
+	real = printf("|%-*.*x|\n", 150, 15, 12345);
+	mine = ft_printf("|%-*.*x|\n", 150, 15, 12345);
 	ft_return_val(mine, real, main);
 
 	printf("\033[1;31m#######################################\033[0m\n\n\n");
@@ -1651,6 +1731,26 @@ int	main()
 	mine = ft_printf("|%-*.*X|\n", -15, 5, INT_MAX);
 	ft_return_val(mine, real, main);
 
+	printf("##### Tests [-150.15X] : 12345 #####\n");
+	real = printf("|%-150.15X|\n", 12345);
+	mine = ft_printf("|%-150.15X|\n", 12345);
+	ft_return_val(mine, real, main);
+
+	printf("##### Tests [-150.*X] : 15 12345 #####\n");
+	real = printf("|%-150.*X|\n", 15, 12345);
+	mine = ft_printf("|%-150.*X|\n", 15, 12345);
+	ft_return_val(mine, real, main);
+
+	printf("##### Tests [-*.15X] : 150 12345 #####\n");
+	real = printf("|%-*.15X|\n", 150, 12345);
+	mine = ft_printf("|%-*.15X|\n", 150, 12345);
+	ft_return_val(mine, real, main);
+
+	printf("##### Tests [-*.*X] : 150 15 12345 #####\n");
+	real = printf("|%-*.*X|\n", 150, 15, 12345);
+	mine = ft_printf("|%-*.*X|\n", 150, 15, 12345);
+	ft_return_val(mine, real, main);
+
 	printf("\033[1;31m#######################################\033[0m\n\n\n");
 
 	printf("##### Tests ['percent'] #####\n");
@@ -1939,14 +2039,34 @@ int	main()
 	mine = ft_printf("|%--0--0--00-00-02.10%|\n");
 	ft_return_val(mine, real, main);
 
-	printf("##### Tests [*.5'percent'] : -15 INT_MAX #####\n");
-	real = printf("|%*.5%|\n", -15, INT_MAX);
-	mine = ft_printf("|%*.5%|\n", -15, INT_MAX);
+	printf("##### Tests [*.5'percent'] : -15 #####\n");
+	real = printf("|%*.5%|\n", -15);
+	mine = ft_printf("|%*.5%|\n", -15);
 	ft_return_val(mine, real, main);
 
-	printf("##### Tests [-*.5'percent'] : -15 INT_MAX #####\n");
-	real = printf("|%-*.5%|\n", -15, INT_MAX);
-	mine = ft_printf("|%-*.5%|\n", -15, INT_MAX);
+	printf("##### Tests [-*.5'percent'] : -15 #####\n");
+	real = printf("|%-*.5%|\n", -15);
+	mine = ft_printf("|%-*.5%|\n", -15);
+	ft_return_val(mine, real, main);
+
+	printf("##### Tests [-150.15'percent'] #####\n");
+	real = printf("|%-150.15%|\n");
+	mine = ft_printf("|%-150.15%|\n");
+	ft_return_val(mine, real, main);
+
+	printf("##### Tests [-150.*'percent'] : 15 #####\n");
+	real = printf("|%-150.*%|\n", 15);
+	mine = ft_printf("|%-150.*%|\n", 15);
+	ft_return_val(mine, real, main);
+
+	printf("##### Tests [-*.15'percent'] : 150 #####\n");
+	real = printf("|%-*.15%|\n", 150);
+	mine = ft_printf("|%-*.15%|\n", 150);
+	ft_return_val(mine, real, main);
+
+	printf("##### Tests [-*.*'percent'] : 150 15 #####\n");
+	real = printf("|%-*.*%|\n", 150, 15);
+	mine = ft_printf("|%-*.*%|\n", 150, 15);
 	ft_return_val(mine, real, main);
 
 	printf("\033[1;31m#######################################\033[0m\n\n\n");
