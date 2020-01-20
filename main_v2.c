@@ -2195,6 +2195,11 @@ int	main()
 	real = printf("|%-*.p|\n", -15, "oui");
 	mine = ft_printf("|%-*.p|\n", -15, "oui");
 	ft_return_val(mine, real, main);
+    
+    printf("##### Tests [20.p] #####\n");
+    real = printf("|%20.p|\n", NULL);
+    mine = ft_printf("|%20.p|\n", NULL);
+    ft_return_val(mine, real, main);
 
 	printf("\033[1;31m#######################################\033[0m\n\n\n");
 
