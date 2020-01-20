@@ -362,7 +362,7 @@ int	main()
 
 	printf("##### Tests [-150.15's] #####\n");
 	real = printf("|%-150.15s|\n", "42");
-	mine = ft_printf("|%-150.15%|\n", "42");
+	mine = ft_printf("|%-150.15s|\n", "42");
 	ft_return_val(mine, real, main);
 
 	printf("##### Tests [-150.*s] : 15 #####\n");
