@@ -532,8 +532,8 @@ int	main()
 	mine = ft_printf("|%10.d|\n", stre[8]);
 	ft_return_val(mine, real, main);
 
-	printf("##### Tests [*.*d] : 10 10 0 #####\n");
-	real = printf("|%*.*d|\n", 10, 10, stre[5]);
+	printf("##### Tests [10.10d] : 0 #####\n");
+	real = printf("|%10.10d|\n", stre[5]);
 	mine = ft_printf("|%10.10d|\n", stre[5]);
 	ft_return_val(mine, real, main);
 
