@@ -2094,6 +2094,16 @@ int	main()
 	mine = ft_printf("|%0*.*%|\n", 5, -5);
 	ft_return_val(mine, real, main);
 
+	printf("##### Tests [10.*'percent'] : 10 #####\n");
+	real = printf("|%10.*%|\n", 10);
+	mine = ft_printf("|%10.*%|\n", 10);
+	ft_return_val(mine, real, main);
+
+	printf("##### Tests [10.*'percent'] : -10 #####\n");
+	real = printf("|%10.*%|\n", -10);
+	mine = ft_printf("|%10.*%|\n", -10);
+	ft_return_val(mine, real, main);
+
 	printf("\033[1;31m#######################################\033[0m\n\n\n");
 
 	printf("##### Tests [p] #####\n");
