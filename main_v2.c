@@ -360,9 +360,9 @@ int	main()
 	mine = ft_printf("|%.015s|\n", "42");
 	ft_return_val(mine, real, main);
 
-	printf("##### Tests [-150.15's] #####\n");
+	printf("##### Tests [-150.15s] : 42 #####\n");
 	real = printf("|%-150.15s|\n", "42");
-	mine = ft_printf("|%-150.15%|\n", "42");
+	mine = ft_printf("|%-150.15s|\n", "42");
 	ft_return_val(mine, real, main);
 
 	printf("##### Tests [-150.*s] : 15 #####\n");
