@@ -2054,6 +2054,11 @@ int	main()
 	real = printf("|%.10%|\n");
 	mine = ft_printf("|%.10%|\n");
 	ft_return_val(mine, real, main);
+    
+    printf("##### Tests [.010'percent'] #####\n");
+    real = printf("|%.010%|\n");
+    mine = ft_printf("|%.010%|\n");
+    ft_return_val(mine, real, main);
 
 	printf("##### Tests [--0--0--00-00-02.10'percent'] #####\n");
 	real = printf("|%--0--0--00-00-02.10%|\n");
