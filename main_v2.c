@@ -1,6 +1,7 @@
 int		ft_printf(const char *, ...);
 #include "../include/libftprintf.h"
 #include <limits.h>
+#include <stdio.h>
 
 typedef	struct		s_main
 {
